@@ -1,0 +1,8 @@
+npx cypress open //--- run cypress tests
+npx cypress run //--- run cypress hedlesly
+npx cypress run --browser edge //----select browser
+npx cypress run --spec "cypress/integration/back-end-test/xhrApiTest.spec.js" //-----to run specific spec file
+npm run cy:runAll  //---- run tests via npm package
+"cy:runAll_qa": "npx cypress run -env configFile=qa"  //----set package to work with other environment
+npm install --save-dev start-server-and-test //------plugin to build app then test via single command
+"cypress:e2e": "start-test start http-get://localhost:4200 cy:runAll   //----set package to build app then test via single command
